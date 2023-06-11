@@ -8,7 +8,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url('/../assets/figure1.svg'), url('/../assets/figure2.svg');
+    background-image: url('../assets/figure1.svg'), url('../assets/figure2.svg');
     background-position: $animationPosition;
     background-repeat: no-repeat, no-repeat;
     opacity: 0;
