@@ -1,0 +1,69 @@
+@import "_vars.scss";
+@import "_mixins.scss";
+
+.dialog{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% - 20px), calc(-50% - 20px));
+    z-index: 1000;
+
+    &::backdrop{
+        background-color: $blue260;
+    }
+
+    &[open]{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 97.47px 16px 69.62px 24px;
+        background: $white;
+        border: 1px solid $blue6007;
+        border-radius: 2px;
+        max-width: 370px;
+        width: 100%;
+        margin: 20px;
+    }
+
+    &__close{
+        position: absolute;
+        top: 23.81px;
+        right: 16px;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    &__title{
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 104%;
+        text-align: center;
+        text-transform: uppercase;
+        color: $blue2;
+        margin-bottom: 28.84px;
+    }
+
+    &__text{
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        color: $black80;
+        max-width: 280px;
+        margin-bottom: 29.84px;
+    }
+
+    &__button{
+        @include button;
+        padding: 16px 74px;
+    }
+}
+
+@media (max-width: 400px){
+    .dialog[open]{
+        max-width: 320px;
+    }
+}

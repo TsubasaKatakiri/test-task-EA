@@ -1,0 +1,18 @@
+.events{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 110px 107px 99px;
+}
+
+@media(max-width: 1024px){
+    .events{
+        padding: 46px 40px 48px;
+    }
+}
+
+@media(max-width: 480px){
+    .events{
+        padding: 59px 20px 52px;
+    }
+}

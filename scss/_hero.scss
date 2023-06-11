@@ -1,0 +1,291 @@
+@import "_vars.scss";
+@import "_mixins.scss";
+
+.hero{
+    width: 100%;
+    height: calc(100% - 192px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/../assets/figure1.svg'), url('/../assets/figure2.svg');
+    background-position: $animationPosition;
+    background-repeat: no-repeat, no-repeat;
+    opacity: 0;
+    animation: backgroundDecorationAppearing;
+    animation-delay: 0.25s;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+
+    &__container{
+        margin: 0 20px;
+        width: calc(100% - 40px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__logo{
+        margin-bottom: 93px;
+        opacity: 0;
+        animation: appearing;
+        animation-fill-mode: forwards;
+        animation-duration: 0.5s;
+    }
+
+    &__construction{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+        animation: appearing;
+        animation-delay: 0.25s;
+        animation-fill-mode: forwards;
+        animation-duration: 0.5s;
+
+        & span{
+            @include spanCaption;
+            margin-bottom: 32px;
+            max-width: 423px;
+        }
+    }
+
+    &__clock{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        opacity: 0;
+        animation: appearing;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+        animation-duration: 0.5s;
+
+        &__block{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__number{
+            font-weight: 600;
+            font-size: 72px;
+            line-height: 100%;
+            color: $blue2;
+            margin-bottom: 3px;
+        }
+
+        &__writing{
+            display: flex;
+            height: 54px;
+            width: 132px;
+            background-image: url('../assets/clock-writing.svg');
+            align-items: center;
+            justify-content: center;
+            color: $white;
+        }
+
+        &__writing-small{
+            display: none;
+            height: 40px;
+            width: 64px;
+            background-image: url('../assets/clock-writing-small.svg');
+            font-size: 12px;
+            align-items: center;
+            justify-content: center;
+            color: $white;
+        }
+    }
+
+
+    &__event{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 70.82px;
+        opacity: 0;
+        animation: appearing;
+        animation-delay: 0.75s;
+        animation-fill-mode: forwards;
+        animation-duration: 0.5s;
+
+        &__link{
+            @include button;
+            justify-content: space-between;
+            padding: 16px 20px 16px 28px;
+            width: 240px;
+        }
+    }
+
+    &__event span{
+        @include spanCaption;
+        margin-bottom: 12px;
+        max-width: 423px;
+    }
+}
+
+@media(max-width: 1440px){
+    .hero{
+        background-position: $animationPosition1440;
+
+        &__clock{   
+            &__number{
+                font-size: 60px;
+            }
+        }
+    }
+}
+
+@media(max-width: 1024px){
+    .hero{
+        background-position: $animationPosition1024;
+
+        &__clock{   
+            &__number{
+                font-size: 48px;
+            }
+        }
+    }
+}
+
+@media(max-width: 768px){
+    .hero{
+        height: calc(100% - 161px);
+        background-size: 50% 50%, 50% 50%;
+        background-position: $animationPosition768;
+
+        &__construction{    
+            & span{
+                font-size: 16px;
+                margin-bottom: 40px;
+                max-width: 286px;
+            }
+        }
+
+        &__clock{   
+            &__number{
+                font-size: 36px;
+                margin-bottom: 6px;
+                margin-right: 12px;
+                margin-left: 12px;
+            }
+
+            &__writing{
+                display: none;
+            }
+    
+            &__writing-small{
+                display: flex;
+            }
+        }
+
+        &__event{
+            margin-top: 40px;
+    
+            &__link{
+                @include button;
+                justify-content: space-between;
+                width: 240px;
+            }
+        }
+
+        &__event span{
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media(max-width: 480px){
+    .hero{
+        background-position: $animationPosition480;
+
+        &__logo{
+            width: 128px;
+            height: 40px;
+            margin-bottom: 66px;
+        }
+
+        &__clock{   
+            &__number{
+                margin: 0;
+                margin-bottom: 6px;
+            }
+        }
+    }
+}
+
+@keyframes appearing{
+    0%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes backgroundDecorationAppearing{
+    0%{
+        opacity: 0;
+        background-position: $animationStart;
+    }
+    100%{
+        opacity: 1;
+        background-position: $animationPosition;
+    }
+}
+
+@media screen and (max-width: 1440px){
+    @keyframes backgroundDecorationAppearing{
+        0%{
+            opacity: 0;
+            background-position: $animationStart;
+        }
+        100%{
+            opacity: 1;
+            background-position: $animationPosition1440;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    @keyframes backgroundDecorationAppearing{
+        0%{
+            opacity: 0;
+            background-position: $animationStart;
+        }
+        100%{
+            opacity: 1;
+            background-position: $animationPosition1024;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    @keyframes backgroundDecorationAppearing{
+        0%{
+            opacity: 0;
+            background-position: $animationStart;
+        }
+        100%{
+            opacity: 1;
+            background-position: $animationPosition768;
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    @keyframes backgroundDecorationAppearing{
+        0%{
+            opacity: 0;
+            background-position: $animationStart;
+        }
+        100%{
+            opacity: 1;
+            background-position: $animationPosition480;
+        }
+    }
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href = "fonts/SF Pro Display/stylesheet.css" rel = "stylesheet" type = "text/css" />
+    <title>LEAD Advisors</title>
+</head>
+<body>
+    <dialog class="dialog" id="dialog">
+        <button class="dialog__close close">
+            <img src="./assets/times.svg" alt="&times;"/>
+        </button>
+        <h3 class="dialog__title">Success!</h3>
+        <p class="dialog__text">You have successfully subscribed to the email newsletter</p>
+        <button class="dialog__button close">Close</button>
+    </dialog>
+    <main>
+        <section class="main-screen">
+            <section class="hero">
+                <div class="hero__container">
+                    <a href='#'>
+                        <img class="hero__logo" src="/assets/Grouplogo.svg" alt="logo"/>
+                    </a>
+                    <div class="hero__construction">
+                        <h2>Under Construction</h2>
+                        <span>We're making lots of improvements and will be back soon</span>
+                    </div>
+                    <div class="hero__clock">
+                        <div class="hero__clock__block" >
+                            <span class="hero__clock__number" id="time-days">92</span>
+                            <span class="hero__clock__writing">Days</span>
+                            <span class="hero__clock__writing-small">DD</span>
+                        </div>
+                        <span class="hero__clock__number">:</span>
+                        <div class="hero__clock__block">
+                            <span class="hero__clock__number" id="time-hours">11</span>
+                            <span class="hero__clock__writing">Hours</span>
+                            <span class="hero__clock__writing-small">HH</span>
+                        </div>
+                        <span class="hero__clock__number">:</span>
+                        <div class="hero__clock__block">
+                            <span class="hero__clock__number" id="time-minutes">41</span>
+                            <span class="hero__clock__writing">Minutes</span>
+                            <span class="hero__clock__writing-small">MM</span>
+                        </div>
+                        <span class="hero__clock__number">:</span>
+                        <div class="hero__clock__block">
+                            <span class="hero__clock__number" id="time-seconds">48</span>
+                            <span class="hero__clock__writing">Seconds</span>
+                            <span class="hero__clock__writing-small">SS</span>
+                        </div>
+                    </div>
+                    <div class="hero__event">
+                        <span>Check our event page when you wait:</span>
+                        <a href="https://github.com/TsubasaKatakiri" class="hero__event__link">
+                            Go to event
+                            <img src="assets/arrow-right.svg" alt="->"/>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="subscribe">
+                <div class="subscribe__container">
+                    <div class="subscribe__filler"></div>
+                    <form class="subscribe__form" id="subscribe-form" method="POST">
+                        <input class="subscribe__input" type="email" required placeholder="Enter your email and get notified"/>
+                        <button type="submit" class="subscribe__button">
+                            <img src="assets/arrow-right.svg" alt=">"/>
+                        </button>
+                    </form>
+                    <a href="#events" class="subscribe__anchor">
+                        Other events
+                        <img src="assets/arrow-down.svg" alt=""/>
+                    </a>
+                </div>
+            </section>
+        </section>
+        <section class="events" id="events">
+            <h2>All events</h2>
+            <div class="accordion">
+                    <div class="accordion__element accordion__element-active">
+                        <div class="accordion__segment accordion__segment-active">
+                            <img class="accordion__segment__background" src="./assets/images/img01.png" alt=""/>
+                            <div class="accordion__segment__overlay">
+                                <span class="accordion__segment__title">Hawaiian Party</span>
+                                <span class="accordion__segment__number">01</span>
+                            </div>
+                        </div>
+                        <div class="accordion__page accordion__page-active">
+                            <img class="accordion__page__background" src="./assets/images/img01.png" alt=""/>
+                            <div class="accordion__page__presentation">
+                                <span class="accordion__page__number">01</span>
+                                <div class="accordion__page__details">
+                                    <h3>Hawaiian Party</h3>
+                                    <span class="accordion__page__date">13.02.2023</span>
+                                    <a class="accordion__page__link" href="https://github.com/TsubasaKatakiri">More information</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__element">
+                        <div class="accordion__segment">
+                            <img class="accordion__segment__background" src="./assets/images/img02.png" alt=""/>
+                            <div class="accordion__segment__overlay">
+                                <span class="accordion__segment__title">Mafia Party</span>
+                                <span class="accordion__segment__number">02</span>
+                            </div>
+                        </div>
+                        <div class="accordion__page">
+                            <img class="accordion__page__background" src="./assets/images/img02.png" alt=""/>
+                            <div class="accordion__page__presentation">
+                                <span class="accordion__page__number">02</span>
+                                <div class="accordion__page__details">
+                                    <h3>Mafia Party</h3>
+                                    <span class="accordion__page__date">13.02.2023</span>
+                                    <a class="accordion__page__link" href="https://github.com/TsubasaKatakiri">More information</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__element">
+                        <div class="accordion__segment">
+                            <img class="accordion__segment__background" src="./assets/images/img03.png" alt=""/>
+                            <div class="accordion__segment__overlay">
+                                <span class="accordion__segment__title">Party</span>
+                                <span class="accordion__segment__number">03</span>
+                            </div>
+                        </div>
+                        <div class="accordion__page">
+                            <img class="accordion__page__background" src="./assets/images/img03.png" alt=""/>
+                            <div class="accordion__page__presentation">
+                                <span class="accordion__page__number">03</span>
+                                <div class="accordion__page__details">
+                                    <h3>Party</h3>
+                                    <span class="accordion__page__date">13.02.2023</span>
+                                    <a class="accordion__page__link" href="https://github.com/TsubasaKatakiri">More information</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__element">
+                        <div class="accordion__segment">
+                            <img class="accordion__segment__background" src="./assets/images/img04.png" alt=""/>
+                            <div class="accordion__segment__overlay">
+                                <span class="accordion__segment__title">Party on the Beach</span>
+                                <span class="accordion__segment__number">04</span>
+                            </div>
+                        </div>
+                        <div class="accordion__page">
+                            <img class="accordion__page__background" src="./assets/images/img04.png" alt=""/>
+                            <div class="accordion__page__presentation">
+                                <span class="accordion__page__number">04</span>
+                                <div class="accordion__page__details">
+                                    <h3>Party on the Beach</h3>
+                                    <span class="accordion__page__date">13.02.2023</span>
+                                    <a class="accordion__page__link" href="https://github.com/TsubasaKatakiri">More information</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__element">
+                        <div class="accordion__segment">
+                            <img class="accordion__segment__background" src="./assets/images/img05.png" alt=""/>
+                            <div class="accordion__segment__overlay">
+                                <span class="accordion__segment__title">Home Security</span>
+                                <span class="accordion__segment__number">05</span>
+                            </div>
+                        </div>
+                        <div class="accordion__page">
+                            <img class="accordion__page__background" src="./assets/images/img05.png" alt=""/>
+                            <div class="accordion__page__presentation">
+                                <span class="accordion__page__number">05</span>
+                                <div class="accordion__page__details">
+                                    <h3>Home Security</h3>
+                                    <span class="accordion__page__date">13.02.2023</span>
+                                    <a class="accordion__page__link" href="https://github.com/TsubasaKatakiri">More information</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__element">
+                        <div class="accordion__segment">
+                            <img class="accordion__segment__background" src="./assets/images/img06.png" alt=""/>
+                            <div class="accordion__segment__overlay">
+                                <span class="accordion__segment__title">Network Design & Implementation</span>
+                                <span class="accordion__segment__number">06</span>
+                            </div>
+                        </div>
+                        <div class="accordion__page">
+                            <img class="accordion__page__background" src="./assets/images/img06.png" alt=""/>
+                            <div class="accordion__page__presentation">
+                                <span class="accordion__page__number">06</span>
+                                <div class="accordion__page__details">
+                                    <h3>Network Design & Implementation</h3>
+                                    <span class="accordion__page__date">13.02.2023</span>
+                                    <a class="accordion__page__link" href="https://github.com/TsubasaKatakiri">More information</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__element">
+                        <div class="accordion__segment">
+                            <img class="accordion__segment__background" src="./assets/images/img07.png" alt=""/>
+                            <div class="accordion__segment__overlay">
+                                <span class="accordion__segment__title">System Design & Engineering</span>
+                                <span class="accordion__segment__number">07</span>
+                            </div>
+                        </div>
+                        <div class="accordion__page">
+                            <img class="accordion__page__background" src="./assets/images/img07.png" alt=""/>
+                            <div class="accordion__page__presentation">
+                                <span class="accordion__page__number">07</span>
+                                <div class="accordion__page__details">
+                                    <h3>System Design & Engineering</h3>
+                                    <span class="accordion__page__date">13.02.2023</span>
+                                    <a class="accordion__page__link" href="https://github.com/TsubasaKatakiri">More information</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__element">
+                        <div class="accordion__segment">
+                            <img class="accordion__segment__background" src="./assets/images/img08.png" alt=""/>
+                            <div class="accordion__segment__overlay">
+                                <span class="accordion__segment__title">Client Care Plans</span>
+                                <span class="accordion__segment__number">08</span>
+                            </div>
+                        </div>
+                        <div class="accordion__page">
+                            <img class="accordion__page__background" src="./assets/images/img08.png" alt=""/>
+                            <div class="accordion__page__presentation">
+                                <span class="accordion__page__number">08</span>
+                                <div class="accordion__page__details">
+                                    <h3>Client Care Plans</h3>
+                                    <span class="accordion__page__date">13.02.2023</span>
+                                    <a class="accordion__page__link" href="https://github.com/TsubasaKatakiri">More information</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>
