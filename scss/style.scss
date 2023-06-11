@@ -20,6 +20,18 @@ main{
     background-color: $white;
 }
 
+.main-screen{
+    width: 100%;
+    height: 100vh;
+}
+
+@import '_normalize.scss';
+@import '_hero.scss';
+@import '_subscribe.scss';
+@import '_events.scss';
+@import '_accordion.scss';
+@import '_dialog.scss';
+
 h2{
     font-weight: 700;
     font-size: 72px;
@@ -29,6 +41,7 @@ h2{
     color: $blue2;
     opacity: 0.39;
     margin-bottom: 8px;
+    margin-top: 0;
 }
 
 @media(max-width: 1440px){
@@ -41,14 +54,12 @@ h2{
 @media(max-width: 1024px){
     h2{
         font-size: 48px;
-        margin-bottom: 20px;
     }
 }
 
 @media(max-width: 768px){
     h2{
         font-size: 36px;
-        margin-bottom: 20px;
     }
 }
 
@@ -58,13 +69,3 @@ h2{
     }
 }
 
-.main-screen{
-    width: 100%;
-    height: 100vh;
-}
-
-@import '_hero.scss';
-@import '_subscribe.scss';
-@import '_events.scss';
-@import '_accordion.scss';
-@import '_dialog.scss';
